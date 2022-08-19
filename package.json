@@ -1,0 +1,22 @@
+{
+  "name": "contacs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "npm": "8.16.0"
+  },
+  "scripts": {
+    "start": "npm start --workspace=backend",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run tsc --workspace=backend"
+  },
+  "keywords": [],
+  "author": "SummaryPuppet",
+  "license": "ISC"
+}
